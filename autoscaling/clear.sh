@@ -1,0 +1,1 @@
+k.exe delete -f template/autoscale-go.yaml
