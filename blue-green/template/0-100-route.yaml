@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Route
+metadata:
+  name: blue-green
+  namespace: default
+spec:
+  traffic:
+    - revisionName: $BLUE_REVISION_NAME
+      percent: 0
+    - revisionName: $GREEN_REVISION_NAME
+      percent: 100
+      tag: v2
