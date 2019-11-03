@@ -10,4 +10,4 @@ spec:
         - image: gcr.io/knative-samples/helloworld-go:latest
           env:
             - name: TARGET
-              value: "Go Sample v1"
+              value: "Go Sample v2"
