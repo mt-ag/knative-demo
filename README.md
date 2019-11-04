@@ -9,7 +9,6 @@ Ursprünglich entwickelt wurde K-Native von Google, um neben Anforderungen wie S
 ## Anforderungen für die Skripte
 * WSL 1.0 mit folgenden Kommandos:
   * `k.exe` ==> `kubectl`
-  * `helm.exe` ==> `helm`
   * `hey.exe` ==> `hey`
 
 ## Installation
@@ -20,7 +19,7 @@ Es gibt zudem zwei prominente Installationsmethoden:
   * Benötigt den gesamten Istio-Stack
   * Anschließend Deployment aller Ressourcen über kubectl
 * **Installation mit Gloo als API-Gateway**
-  * API-Gateway ist leichtgewichtiger, bringt aber die Vorteile von Istio nicht mit
+  * Gloo ist leichtgewichtiger, bringt aber die Vorteile von Istio nicht mit
   * Installation über [gloo](https://github.com/solo-io/gloo), wie in der [K-Native Doku beschrieben](https://knative.dev/docs/install/knative-with-gloo/)
 
 Im Rahmen dieser Präsentation wird ausschließlich `gloo` benutzt.
@@ -55,7 +54,3 @@ Es wird ein Beispiel-Service Deployt, der so konfiguriert ist, dass pro Service 
 Anschließend wird mit dem Tool [hey](https://github.com/rakyll/hey) Last auf dem System erzeugt (Es werden über eine Zeitspanne von 1 Minute 50 Requests an den Endpunkt aufrechterhalten).
 Ein Blick auf die Pods zeigt anschließend das Hoch- und zurück auf Null-Skalieren des K-Native services.
 Die Entwicklung lässt sich auch auf dem Monitoring-Dashboard beobachten.
-
-### Lambda-Kompatiblität
-TriggerMesh bietet ein OpenSource-Projekt namens [KLR (K-Native Lambda Runtime)](https://github.com/triggermesh/knative-lambda-runtime).
-Diese Runtime ermöglicht das Bereitstellen von Lambda-Funktionen auf einer K-Native Installation.
