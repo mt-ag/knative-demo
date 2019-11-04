@@ -1,4 +1,7 @@
 /*
+Original:
+https://github.com/knative/docs/tree/release-0.10/docs/serving/samples/autoscale-go
+
 Copyright 2017 The Knative Authors
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
